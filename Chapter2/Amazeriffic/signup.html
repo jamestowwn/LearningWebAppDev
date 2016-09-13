@@ -6,27 +6,27 @@
 
   <body>
     <header>
-      <h1>Amazeriffic</h1>
+      <h1>Amazeriffic - Sign Up</h1>
       <nav>
-        <a href="signup.html">Sign Up!</a> |
+        <a href="SignUp.html">Sign Up!</a> |
         <a href="faq.html">FAQ</a> |
         <a href="#">Support</a>
       </nav>
     </header>
 
     <main>
-      <h2>Amazeriffic will change your life!</h2>
+      <h2>Sign Up for Amazeriffic</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
          eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       
-      <h3>Here's why you need Amazeriffic</h3>
-      <ul>
-        <li>It fits your lifestyle</li>
-        <li>It's awesome</li>
-        <li>It rocks your world</li>
-      </ul>
-
-      <img src="lightbulb.png" alt="an image of a lightbulb">
+      <form action="processingscript.php" method="post">
+         <label for="username"><br>Please enter your desired username:</label>
+         <input type="text" name="username" id="username">
+         <label for="email"><br>Please enter your e-mail address:</label>
+         <input type="text" for="email" id="email">
+         <label for="password"><br>Please enter your password:</label>
+         <input type="password" for="password" id="password">
+      </form>
     </main>
     
     <footer>

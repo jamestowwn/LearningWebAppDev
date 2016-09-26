@@ -14,31 +14,41 @@ header .container, main .container, footer .container {
 header {
   background: white;
   overflow: auto;
+  padding-bottom: 2em;
 }
 
 header h1 {
   float: left;
   width: 570px;
+  font-size: xx-large;
 }
 
 header nav {
   float: right;
   width: 285px;
+  font-size: large;
 }
 
 main {
   background: white;
   overflow: auto;
+  padding-bottom: 2em;
 }
 
 main .left {
   float: left;
   width: 570px;
+  padding-left: 2em;
 }
 
 main .right {
   float: right;
   width: 285px;
+}
+
+footer {
+  overflow: auto;
+  padding-top: 2em;
 }
 
 footer .left {

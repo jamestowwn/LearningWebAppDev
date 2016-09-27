@@ -35,10 +35,15 @@ main {
   padding-bottom: 2em;
 }
 
+main dd {
+  padding-left: 2em;
+  padding-bottom: 1em;
+}
+
 main .left {
   float: left;
   width: 570px;
-  padding-left: 2em;
+  margin-left: 2em;
 }
 
 main .right {

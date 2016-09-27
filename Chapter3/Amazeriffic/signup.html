@@ -1,10 +1,18 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Amazeriffic</title>
     <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+
+    <title>Amazeriffic</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+
     <script src="semantic/dist/semantic.min.js"></script>
+
+    <style type="text/css">
+      .column {
+        max-width: 450px;
+      }
+    </style>
   </head>
 
   <body>
@@ -20,13 +28,13 @@
 
     <main class="ui middle aligned center aligned grid">
       <div class="column">
-        <h2 class="ui image header">
+        <div class="ui image header xx-large">
+          <img src="lightbulb.png" class="image" alt="!">
           <div class="content">
             Sign Up for Amazeriffic
           </div>
-        </h2>
-        
-        <form class="ui form" action="processingscript.php" method="post">
+        </div>        
+        <form class="ui large form">
            <div class="ui stacked segment">
              <div class="field">
                <div class="ui left icon input">
@@ -36,7 +44,7 @@
              </div>
              <div class="field">
                <div class="ui left icon input">
-                 <i class="user icon"></i>               
+                 <i class="mail icon"></i>               
                  <input type="text" name="email" id="email" placeholder="Please enter your e-mail address:">
                </div>
              </div>
@@ -53,37 +61,38 @@
                </div>
              </div>
            </div>
-           <div>
-             <input type="submit" value="Complete Sign Up">
-             <div class="ui divider"></div>
-           </div>
+           <div class="ui fluid large submit button">Complete Sign Up</div>
+           <div class="ui error message"></div>
         </form>
       </div>
     </main>
-    
-    <footer>
-      <div class="container">
-        <div class="left">
-          <div class="contact">
-            <h5>Contact Us</h5>
-            <p>Amazeriffic!</p>
-            <p>555 Fiftieth Street</p>
-            <p>Asheville, NC 28801</p>
+
+    <div class="ui vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable divided equal height stackable grid">
+          <div class="three wide column">
+            <div class="contact">
+              <h4 class="ui header">Contact Us</h4>
+              <p>Amazeriffic!</p>
+              <p>555 Fiftieth Street</p>
+              <p>Asheville, NC 28801</p>
+            </div>
+          </div>
+          <div class="three wide column right floated left aligned">
+            <div class="sitemap">
+              <h4 class="ui header">Sitemap</h4>
+              <div class="ui link list">
+                <a href="index.html" class="item">Home</a>
+                <a href="#" class="item">About Us</a>
+                <a href="#" class="item">Privacy</a>
+                <a href="#" class="item">Support</a>
+                <a href="faq.html" class="item">FAQ</a>
+                <a href="#" class="item">Careers</a>
+              </div>
+            </div>
           </div>
         </div>
-  
-        <div class="sitemap">
-          <h5>Sitemap</h5>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
       </div>
-    </footer>
+    </div>
   </body>
 </html>

@@ -1,40 +1,59 @@
 var main = function () {
-    "use strict";
+  'use strict';
+  
+  var user1ColorOn = 1;
+  var user2ColorOn = 1;
+  
+  var addCommentFromInputBox = function (user, inputValue) {
+    var $newComment;
 
-    var addCommentFromInputBox = function (user, inputValue) {
-        var $new_comment;
+    if (inputValue !== '') {
+      $newComment = $('<p class=' + user + '>').text(inputValue);
+      $newComment.hide();
+      $('.comments').append($newComment);
+      $newComment.fadeIn();
+    }
+  };
 
-        if (inputValue !== "") {
-            $new_comment = $("<p class='" + user + "'>").text(inputValue);
-            $new_comment.hide();
-            $(".comments").append($new_comment);
-            $new_comment.fadeIn();
-        }
-    };
+  var addCommentFromUser1 = function (inputValue) {
+    if (user1ColorOn === 1) {
+      addCommentFromInputBox('user1c1', inputValue);
+    } else {
+      addCommentFromInputBox('user1c2', inputValue);
+    }
+    user1ColorOn = user1ColorOn * -1 + 1;
+    $('.comment-input input').val('');
+  };
 
-    $(".comment-input button").on("click", function (event) {
-        addCommentFromInputBox("user1", $(".comment-input input").val());
-        $(".comment-input input").val("");
-    });
+  var addCommentFromUser2 = function (inputValue) {
+    if (user2ColorOn === 1) {
+      addCommentFromInputBox('user2c1', inputValue);
+    } else {
+      addCommentFromInputBox('user2c2', inputValue);
+    }
+    user2ColorOn = user2ColorOn  * -1 + 1;
+    $('.comment-input2 input').val('');
+  };
 
-    $(".comment-input input").on("keypress", function (event) {
-        if (event.keyCode === 13) {
-            addCommentFromInputBox("user1", $(".comment-input input").val());
-            $(".comment-input input").val("");
-        }
-    });
+  $('.comment-input button').on('click', function () {
+    addCommentFromUser1($('.comment-input input').val());
+  });
 
-    $(".comment-input2 button").on("click", function (event) {
-        addCommentFromInputBox("user2", $(".comment-input2 input").val());
-        $(".comment-input2 input").val("");
-    });
+  $('.comment-input input').on('keypress', function (event) {
+    if (event.keyCode === 13) {
+      addCommentFromUser1($('.comment-input input').val());
+    }
+  });
 
-    $(".comment-input2 input").on("keypress", function (event) {
-        if (event.keyCode === 13) {
-            addCommentFromInputBox("user2", $(".comment-input2 input").val());
-            $(".comment-input2 input").val("");
-        }
-    }); 
+  $('.comment-input2 button').on('click', function () {
+    addCommentFromUser2($('.comment-input2 input').val());
+  });
+
+  $('.comment-input2 input').on('keypress', function (event) {
+    if (event.keyCode === 13) {
+      addCommentFromUser2($('.comment-input2 input').val());
+    }
+  }); 
 };
 
 $(document).ready(main);
